@@ -1,8 +1,10 @@
+/* Base/Reset Styles */
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
+
 body {
   color: black;
   background-color: #d3d3d3;
@@ -10,6 +12,8 @@ body {
   line-height: 1.5rem;
   font-weight: bolder;
 }
+
+/* Header Styles */
 .head {
   display: flex;
   justify-content: center;
@@ -34,6 +38,7 @@ body {
   will-change: background-position;
 }
 
+/* Animations */
 @keyframes gradientSlide {
   0% {
     background-position: right;
@@ -42,14 +47,7 @@ body {
     background-position: left;
   }
 }
-.img-container img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: rgb(0, 61, 7) 0px 8px 10px 0px;
-  margin: 3px;
-}
+
 @keyframes float {
   0%,
   100% {
@@ -59,39 +57,39 @@ body {
     transform: scale(1.1);
   }
 }
+
+/* Image Container Styles */
 .img-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
+
+.img-container img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: rgb(0, 61, 7) 0px 8px 10px 0px;
+  margin: 3px;
+}
+
 img:hover {
   opacity: 0.9;
   animation: float 1.5s ease-in-out infinite;
 }
+
 #pack5 img {
   opacity: 0.9;
   animation: float 3s ease-in-out infinite;
   transform-origin: center;
 }
+
 #order-made img:hover {
   animation: none;
 }
-#juices,
-#order-made,
-#appe {
-  background-color: rgb(255, 165, 0);
-}
-#appe .title,
-#juices .title,
-#order-made .title {
-  background-color: rgb(132, 255, 0, 0.8);
-}
-#dessert .title,
-#specials .title,
-#dishes .title {
-  background-color: rgb(255, 165, 0);
-}
 
+/* Layout Styles */
 .page {
   display: flex;
   flex-direction: column;
@@ -99,6 +97,7 @@ img:hover {
   margin: 10px auto;
   gap: 15px;
 }
+
 .container {
   background-color: rgb(132, 255, 0, 0.8);
   border: 1px solid rgba(253, 241, 241, 0.575);
@@ -107,6 +106,7 @@ img:hover {
   border-radius: 30px;
   box-shadow: rgb(48, 54, 52) 0px 8px 8px 0px;
 }
+
 .title {
   background-color: #fff;
   font-family: Arial, sans-serif;
@@ -122,10 +122,30 @@ img:hover {
   padding: 8px;
   font-weight: bold;
 }
+
 .title:hover {
   box-shadow: rgb(4, 62, 10) 0px 10px 10px 0px;
   transition: box-shadow 0.5s ease-in-out;
   color: rgb(1, 69, 23);
+}
+
+/* Section-specific Styles */
+#juices,
+#order-made,
+#appe {
+  background-color: rgb(255, 165, 0);
+}
+
+#appe .title,
+#juices .title,
+#order-made .title {
+  background-color: rgb(132, 255, 0, 0.8);
+}
+
+#dessert .title,
+#specials .title,
+#dishes .title {
+  background-color: rgb(255, 165, 0);
 }
 
 /* Media Query for desktop */
@@ -149,8 +169,8 @@ img:hover {
     grid-row: 3/4;
   }
 }
-/* Media query for Mobile*/
 
+/* Media query for Mobile*/
 @media (max-width: 600px) {
   .head {
     width: 60%;
@@ -162,7 +182,6 @@ img:hover {
     max-width: 70px;
     height: 70px;
   }
-
   .title {
     width: 40%;
     height: 35px;
@@ -172,27 +191,23 @@ img:hover {
   #dishes {
     order: 1;
   }
-
   #juices {
     order: 2;
   }
-
   #appe {
     order: 3;
   }
-
   #dessert {
     order: 4;
   }
-
   #specials {
     order: 5;
   }
-
   #order-made {
     order: 6;
   }
 }
+
 /* Extra small devices */
 @media (max-width: 480px) {
   .head {
@@ -200,17 +215,14 @@ img:hover {
     font-size: 1em;
     padding: 8px;
   }
-
   .img-container img {
     width: 60px;
     height: 60px;
   }
-
   .page {
     max-width: 100%;
     padding: 0 5px;
   }
-
   .title {
     width: 90%;
   }
